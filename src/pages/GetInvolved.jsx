@@ -18,7 +18,7 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="md:py-10">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Volunteer Form */}

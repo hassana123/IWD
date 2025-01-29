@@ -57,7 +57,7 @@ const Schedule = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="md:py-10 py-5">
         <div className="container">
           {/* Track Filter */}
           <div className="flex flex-wrap gap-4 justify-center mb-12">

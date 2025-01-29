@@ -131,7 +131,7 @@ const navigate = useNavigate();
                 }}
               >
                 <div className="absolute inset-0  bg-gradient-to-r from-primary/60 to-transparent">
-                  <div className="container mx-20  h-full flex items-center">
+                  <div className="container md:mx-20  h-full flex items-center">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -148,16 +148,20 @@ const navigate = useNavigate();
                       <h1 className="text-3xl md:text-5xl font-bold mb-4">
                         {slide.title}
                       </h1>
-                      <p className="text-xl mb-8">
+                      <p className="text-xl mb-8 text-center ">
                         {slide.description}
                       </p>
                       {index === 0 && (
                         <div className="space-y-3 mt-[-15px]">
-                          <div className="flex items-center space-x-4 text-lg">
+                           <div className="md:flex text-center items-center md:space-x-4 text-lg mx-auto w-[50%] space-y-2 md:space-y-0">
+                          <div className="flex text-center items-center space-x-2 text-lg">
                             <Calendar className="w-6 h-6" />
                             <span>March 8, 2025</span>
-                            <MapPin className="w-6 h-6 ml-4" />
-                            <span>Kano, Nigeria</span>
+                          </div>
+                          <div className="flex text-center items-center space-x-2 text-lg">
+                          <MapPin className="w-6 h-6 ml-4" />
+                          <span>Kano, Nigeria</span>
+                          </div>
                           </div>
                           <div className="inline-block bg-white/10 backdrop-blur-md rounded-lg p-6">
                             <Countdown

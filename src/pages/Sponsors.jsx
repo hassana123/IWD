@@ -70,7 +70,7 @@ const Sponsors = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="md:py-10 py-5">
         <div className="container">
           <h2 className="section-title">Current Sponsors</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -120,7 +120,7 @@ const Sponsors = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full btn-primary mt-6">
+                  <button className="btn btn-primary mt-6">
                     Become a Sponsor
                   </button>
                 </div>

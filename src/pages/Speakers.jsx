@@ -52,7 +52,7 @@ const Speakers = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="md:py-10 py-5">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {speakers.map((speaker, index) => (

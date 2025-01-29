@@ -36,8 +36,8 @@ const About = () => {
         </div>
       </section>
 
-      <section className="md:py-20 py-10">
-        <div className="container">
+      <section className="md:py-10 py-5">
+        <div className="w-[90%] mx-auto max-w-[900px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}

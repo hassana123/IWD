@@ -20,7 +20,7 @@ const Contact = () => {
       </section>
 
       <section className="py-20">
-        <div className="container">
+        <div className="container w-[90%] mx-auto max-w-[900px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
