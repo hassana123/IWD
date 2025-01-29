@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Manually defining colors */
+:root {
+  --primary: #FF69B4;
+  --secondary: #FFB6C1;
+  --accent: #FFC0CB;
+  --dark: #2D3748;
+}
+
+@theme {
+  --color-primary: #FF69B4;
+  --color-secondary: #FFB6C1;
+  --color-accent: #FFC0CB;
+  --color-dark: #2D3748;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+
+  --font-display: Playfair Display, serif;
+}
+/* Manually defining fonts */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);  /* Using the custom color */
+    background-color: white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;  /* Using the custom font */
+  }
+}
+
+/* Components */
+@layer components {
+  .btn-primary {
+    padding: 1.5rem 3rem;  /* px-6 py-3 */
+    background-color: var(--primary);  /* Using the custom color */
+    color: white;
+    border-radius: 30px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: rgba(255, 105, 180, 0.9); /* Hover effect */
+  }
+
+  .btn-secondary {
+    padding: 1.5rem 3rem; /* px-6 py-3 */
+    border: 2px solid var(--primary); /* border-primary */
+    color: var(--primary);  /* text-primary */
+    border-radius: 30px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .section-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold;  /* font-bold */
+    text-align: center;
+    margin-bottom: 2rem;  /* mb-8 */
+  }
+
+  .container {
+    max-width: 80rem; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
