@@ -45,8 +45,8 @@ const Home = () => {
               Celebrating Women in Tech
               <span className="block my-1 text-primary">IWD 2024</span>
             </h1>
-            <div className="flex md:gap-5 items-center justify-center flex-col md:flex-row text-center md:text-left">
-      <p className="text-xl md:text-2xl mb-3 text-gray-600 flex items-center">
+            <div className="flex gap-5 items-center justify-center flex-col md:flex-row text-center md:text-left">
+      <p className="text-xl md:text-2xl mb-3 md:mb-8 text-gray-600 flex items-center">
         <FaCalendarAlt className="mr-2 text-gray-600" />
         Redefine Possible March 8, 2024
       </p>

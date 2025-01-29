@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <div>
-      <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-20">
+      <section className="bg-gradient-to-r from-[#FF69B4]/10 to-secondary/10 py-20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="md:py-20 py-10">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
