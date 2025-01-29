@@ -39,6 +39,19 @@ body {
 
 /* Components */
 @layer components {
+
+  .section-title {
+    font-size: 2.25rem; 
+    font-weight: bold;  
+    text-align: center;
+    margin-bottom: 2rem; 
+  }
+  .container {
+    width: 90%;
+    max-width: 700px;
+   margin: auto;
+  }
+  
   /* .btn-primary {
     padding: 20px 50px; 
     background-color: var(--primary);  
@@ -70,14 +83,67 @@ body {
 
 
 }
-.section-title {
-  font-size: 2.25rem; /* text-4xl */
-  font-weight: bold;  /* font-bold */
+
+/* General button styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
-  margin-bottom: 2rem;  /* mb-8 */
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
 }
-.container {
-  width: 90%;
-  max-width: 700px;
- margin: auto;
+
+/* Primary Button */
+.btn-primary {
+  background-color: #FF69B4; /* Pink background */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.btn-primary:hover {
+  background-color: #FF4F9B; /* Darker pink on hover */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.btn-primary:active {
+  background-color: #FF3385; /* Even darker pink on click */
+  transform: translateY(0); /* Reset the lift effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: transparent;
+  color: #FF69B4; /* Pink text */
+  border: 2px solid #FF69B4; /* Pink border */
+}
+
+.btn-secondary:hover {
+  background-color: #FF69B4; /* Pink background on hover */
+  color: white; /* White text on hover */
+  border-color: #FF69B4; /* Border color stays same */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.btn-secondary:active {
+  background-color: transparent; /* Transparent background on click */
+  color: #FF69B4; /* Pink text stays on click */
+  border-color: #FF69B4; /* Border color stays same */
+  transform: translateY(0); /* Reset the lift effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }

@@ -43,23 +43,23 @@ const Home = () => {
           >
             <h1 className="md:text-5xl text-4xl md:text-7xl font-bold mb-6">
               Celebrating Women in Tech
-              <span className="block my-1 text-primary">IWD 2024</span>
+              <span className="block my-1 text-primary">IWD 2025</span>
             </h1>
-            <div className="flex gap-5 items-center justify-center flex-col md:flex-row text-center md:text-left">
-      <p className="text-xl md:text-2xl mb-3 md:mb-8 text-gray-600 flex items-center">
+            <div className="flex md:gap-5 items-center justify-center flex-col md:flex-row text-center md:text-left">
+      <p className="text-md md:text-2xl mb-3 md:mb-8 text-gray-600 flex items-center">
         <FaCalendarAlt className="mr-2 text-gray-600" />
-        Redefine Possible March 8, 2024
+        Redefine Possible March 8, 2025
       </p>
-      <p className="text-xl md:text-2xl mb-8 text-gray-600 flex items-center">
+      <p className="text-md md:text-2xl mb-8 text-gray-600 flex items-center">
         <FaMapMarkerAlt className="mr-2 text-gray-600" />
         Kano, Nigeria
       </p>
     </div>
             <div className=" w-[80%] mx-auto  flex flex-col md:flex-row gap-4 justify-center mb-12">
-              <Link to="/get-involved" className="btn-primary">
+              <Link to="/get-involved" className=" btn btn-primary">
                 Register Now
               </Link>
-              <Link to="/schedule" className="btn-secondary">
+              <Link to="/schedule" className="btn btn-secondary">
                 View Schedule
               </Link>
             </div>

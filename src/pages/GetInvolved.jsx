@@ -63,7 +63,7 @@ const GetInvolved = () => {
                     <option>Social Media</option>
                   </select>
                 </div>
-                <button type="submit" className="btn-primary w-full">
+                <button type="submit" className="btn btn-primary ">
                   Submit Application
                 </button>
               </form>
@@ -110,7 +110,7 @@ const GetInvolved = () => {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn-primary w-full">
+                <button type="submit" className="btn btn-primary ">
                   Submit Proposal
                 </button>
               </form>
