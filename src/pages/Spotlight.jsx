@@ -82,7 +82,7 @@ const Spotlight = () => {
           <div className="max-w-3xl mx-auto">
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.youtube.com/embed/your-video-id"
+                src="https://www.youtube.com/embed/LMt7aW_j2fk?si=cfOzwXt9R5z5vj2z"
                 title="Event Highlights"
                 className="w-full h-[400px] rounded-lg shadow-lg"
                 allowFullScreen
