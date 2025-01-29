@@ -1,9 +1,82 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Countdown from 'react-countdown';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { Calendar, MapPin, Users, Mic, Gift, Sparkles, Heart, Mail } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 const Home = () => {
   const eventDate = new Date('2025-03-08T09:00:00');
+const navigate = useNavigate();
+  const slides = [
+    {
+      title: "IWD Kano 2025",
+      subtitle: "",
+      description: "Join us for an inspiring celebration of women in technology",
+      bgImage: "https://pbs.twimg.com/media/Fr0dBPDWAAEgfX0?format=jpg&name=medium",
+      link: "/",
+      icon: <Sparkles className="w-8 h-8" />
+    },
+    {
+      title: "About the Event",
+      subtitle: "Our Mission",
+      description: "Learn about our mission to empower women in technology",
+      bgImage: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80",
+      link: "/about",
+      icon: <Heart className="w-8 h-8" />
+    },
+    {
+      title: "Event Schedule",
+      subtitle: "What's Happening",
+      description: "Explore our exciting lineup of sessions and workshops",
+      bgImage: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&q=80",
+      link: "/schedule",
+      icon: <Calendar className="w-8 h-8" />
+    },
+    {
+      title: "Meet Our Speakers",
+      subtitle: "Industry Leaders",
+      description: "Get inspired by our distinguished speakers",
+      bgImage: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80",
+      link: "/speakers",
+      icon: <Mic className="w-8 h-8" />
+    },
+    {
+      title: "Our Sponsors",
+      subtitle: "Supporting Partners",
+      description: "Meet the organizations making this event possible",
+      bgImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80",
+      link: "/sponsors",
+      icon: <Gift className="w-8 h-8" />
+    },
+    {
+      title: "Spotlight",
+      subtitle: "Success Stories",
+      description: "Celebrating achievements in tech",
+      bgImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80",
+      link: "/spotlight",
+      icon: <Sparkles className="w-8 h-8" />
+    },
+    {
+      title: "Get Involved",
+      subtitle: "Join the Movement",
+      description: "Be part of this amazing community",
+      bgImage: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=80",
+      link: "/get-involved",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Contact Us",
+      subtitle: "Get in Touch",
+      description: "Reach out to us for any inquiries",
+      bgImage: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&q=80",
+      link: "/contact",
+      icon: <Mail className="w-8 h-8" />
+    }
+  ];
 
   const speakers = [
     {
@@ -33,29 +106,95 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#FF69B4]/10 to-[#FFB6C1]/10 py-25 md:py-35">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="md:text-5xl text-4xl md:text-7xl font-bold mb-6">
-              Celebrating Women in Tech
-              <span className="block my-1 text-primary">IWD 2025</span>
-            </h1>
-            <div className="flex md:gap-5 items-center justify-center flex-col md:flex-row text-center md:text-left">
-      <p className="text-md md:text-2xl mb-3 md:mb-8 text-gray-600 flex items-center">
-        <FaCalendarAlt className="mr-2 text-gray-600" />
-        Redefine Possible March 8, 2025
-      </p>
-      <p className="text-md md:text-2xl mb-8 text-gray-600 flex items-center">
-        <FaMapMarkerAlt className="mr-2 text-gray-600" />
-        Kano, Nigeria
-      </p>
-    </div>
-            <div className=" w-[80%] mx-auto  flex flex-col md:flex-row gap-4 justify-center mb-12">
+      <section className="relative ">
+        <Swiper
+          spaceBetween={0}
+          centeredSlides={true}
+          autoplay={{
+            delay: 180000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="h-full"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div 
+              onClick={() => navigate(slide.link)}
+                className="relative h-full w-full cursor-pointer  bg-cover  bg-center"
+                style={{ 
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.bgImage})` 
+                }}
+              >
+                <div className="absolute inset-0  bg-gradient-to-r from-primary/60 to-transparent">
+                  <div className="container mx-20  h-full flex items-center">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="max-w-3xl text-white"
+                    >
+                      
+                      <div className="mb-4 inline-block p-2 bg-pink-500 rounded-full">
+                        {slide.icon}
+                      </div>
+                      <h2 className="text-xl font-bold uppercase tracking-wider mb-2">
+                        {slide.subtitle}
+                      </h2>
+                      <h1 className="text-3xl md:text-5xl font-bold mb-4">
+                        {slide.title}
+                      </h1>
+                      <p className="text-xl mb-8">
+                        {slide.description}
+                      </p>
+                      {index === 0 && (
+                        <div className="space-y-3 mt-[-15px]">
+                          <div className="flex items-center space-x-4 text-lg">
+                            <Calendar className="w-6 h-6" />
+                            <span>March 8, 2025</span>
+                            <MapPin className="w-6 h-6 ml-4" />
+                            <span>Kano, Nigeria</span>
+                          </div>
+                          <div className="inline-block bg-white/10 backdrop-blur-md rounded-lg p-6">
+                            <Countdown
+                              date={eventDate}
+                              renderer={({ days, hours, minutes, seconds }) => (
+                                <div className="flex gap-8">
+                                  <div className="text-center">
+                                    <div className="text-4xl font-bold">{days}</div>
+                                    <div className="text-sm">Days</div>
+                                  </div>
+                                  <div className="text-center">
+                                    <div className="text-4xl font-bold">{hours}</div>
+                                    <div className="text-sm">Hours</div>
+                                  </div>
+                                  <div className="text-center">
+                                    <div className="text-4xl font-bold">{minutes}</div>
+                                    <div className="text-sm">Minutes</div>
+                                  </div>
+                                  <div className="text-center">
+                                    <div className="text-4xl font-bold">{seconds}</div>
+                                    <div className="text-sm">Seconds</div>
+                                  </div>
+                                </div>
+                              )}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+      <div className=" w-[80%] mx-auto my-5  flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link to="/get-involved" className=" btn btn-primary">
                 Register Now
               </Link>
@@ -63,37 +202,8 @@ const Home = () => {
                 View Schedule
               </Link>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg inline-block">
-              <Countdown
-                date={eventDate}
-                renderer={({ days, hours, minutes, seconds }) => (
-                  <div className="flex gap-6">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">{days}</div>
-                      <div className="text-sm text-gray-600">Days</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">{hours}</div>
-                      <div className="text-sm text-gray-600">Hours</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">{minutes}</div>
-                      <div className="text-sm text-gray-600">Minutes</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">{seconds}</div>
-                      <div className="text-sm text-gray-600">Seconds</div>
-                    </div>
-                  </div>
-                )}
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Featured Speakers */}
-      <section className="py-20">
+       {/* Featured Speakers */}
+       <section className="">
         <div className="container">
           <h2 className="section-title">Featured Speakers</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
