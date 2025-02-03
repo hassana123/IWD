@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
-
+import logo from "../assets/wtmlogo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,8 +20,9 @@ const Navbar = () => {
     <nav className="bg-white shadow-md fixed w-[100%] z-5">
       <div className="container mx-auto md:px-0 px-4 lg:px-4">
         <div className="flex justify-between items-center py-3">
-          <NavLink to="/" className="flex items-center">
-            <span className="lg:text-2xl text-md font-display font-bold text-primary">IWD Kano</span>
+          <NavLink to="/" className="flex gap-2 items-center">
+          <img className='w-6' src={logo} alt="wtm-logo" />
+            <span className=" text-md font-display font-bold text-primary">International Women's Day Kano</span>
           </NavLink>
 
           {/* Desktop Navigation */}

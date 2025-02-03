@@ -9,11 +9,14 @@
   --dark: #2D3748;
 }
 
+
 @theme {
   --color-primary: #FF69B4;
   --color-secondary: #FFB6C1;
   --color-accent: #FFC0CB;
-  --color-dark: #2D3748;
+  --color-wtmblue: #4081EC;
+  --color-wtmteal: #00B89F;
+  --color-dark: #1B2D3D;
   --color-tahiti: #3ab7bf;
   --color-bermuda: #78dcca;
 
