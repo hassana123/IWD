@@ -24,8 +24,8 @@ const Home = () => {
   const navigate = useNavigate();
   const slides = [
     {
-      title: "Internatonal Women's Day Kano 2025",
-      subtitle: "",
+      title: "Celebrating Women in Tech - Internatonal Women's Day Kano 2025",
+      subtitle: "Redefine Possible",
       description:
         "Join us for an inspiring celebration of women in technology",
       bgImage:
@@ -143,8 +143,8 @@ const Home = () => {
   const stats = [
     { number: "500+", label: "Attendees" },
     { number: "20+", label: "Speakers" },
-    { number: "15+", label: "Workshops" },
-    { number: "10+", label: "Partners" },
+    { number: "10+", label: "Interactive Sessions" },
+    { number: "1", label: "Transformative Day" },
   ];
 
   return (
