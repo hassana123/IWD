@@ -295,6 +295,11 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
+          <div className="text-center mt-8">
+            <Link to="/speakers" className="btn btn-primary">
+              View All Speakers
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -391,45 +396,46 @@ const Home = () => {
 
       {/* Quick Links */}
       <section className="py-10">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link
-              to="/about"
-              className="group bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition"
-            >
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-wtmteal">
-                About the Event
-              </h3>
-              <p className="text-gray-600">
-                Learn more about IWD Kano and our mission to empower women in
-                tech.
-              </p>
-            </Link>
-            <Link
-              to="/schedule"
-              className="group bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition"
-            >
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-wtmteal">
-                Event Schedule
-              </h3>
-              <p className="text-gray-600">
-                View our exciting lineup of sessions, workshops, and keynotes.
-              </p>
-            </Link>
-            <Link
-              to="/sponsors"
-              className="group bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition"
-            >
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-wtmteal">
-                Our Sponsors
-              </h3>
-              <p className="text-gray-600">
-                Meet the amazing organizations supporting women in tech.
-              </p>
-            </Link>
-          </div>
-        </div>
-      </section>
+  <div className="container">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <Link
+        to="/about"
+        className="group bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition"
+      >
+        <h3 className="text-2xl font-bold mb-4 group-hover:text-wtmteal">
+          About the Event
+        </h3>
+        <p className="text-gray-600">
+          Learn more about IWD Kano and our mission to empower women in
+          tech.
+        </p>
+      </Link>
+      <Link
+        to="/schedule"
+        className="group bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition"
+      >
+        <h3 className="text-2xl font-bold mb-4 group-hover:text-wtmteal">
+          Event Schedule
+        </h3>
+        <p className="text-gray-600">
+          View our exciting lineup of sessions, workshops, and keynotes.
+        </p>
+      </Link>
+      <Link
+        to="/get-involved"
+        className="group bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition"
+      >
+        <h3 className="text-2xl font-bold mb-4 group-hover:text-wtmteal">
+          Get Involved
+        </h3>
+        <p className="text-gray-600">
+          Join us and empower women in tech by volunteering or becoming a speaker.
+        </p>
+      </Link>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
