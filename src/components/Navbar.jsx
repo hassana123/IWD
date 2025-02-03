@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
-import logo from "../assets/wtmlogo.png";
+import logo from "../assets/wtm.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 

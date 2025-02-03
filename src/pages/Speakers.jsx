@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Twitter, Linkedin } from 'lucide-react'; // Import the icons
 
 const Speakers = () => {
   const speakers = [
@@ -80,17 +81,19 @@ const Speakers = () => {
                   <p className="text-primary font-semibold mb-3">{speaker.role}</p>
                   <p className="text-gray-600 mb-4">{speaker.bio}</p>
                   <div className="flex space-x-4">
+                    {/* Twitter Icon */}
                     <a
                       href={speaker.socials.twitter}
                       className="text-gray-400 hover:text-wtmteal transition"
                     >
-                      Twitter
+                      <Twitter className="w-5 h-5" />
                     </a>
+                    {/* LinkedIn Icon */}
                     <a
                       href={speaker.socials.linkedin}
                       className="text-gray-400 hover:text-wtmteal transition"
                     >
-                      LinkedIn
+                      <Linkedin className="w-5 h-5" />
                     </a>
                   </div>
                 </div>
@@ -104,4 +107,3 @@ const Speakers = () => {
 };
 
 export default Speakers;
-
