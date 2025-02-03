@@ -31,21 +31,23 @@ const Spotlight = () => {
 
   return (
     <div>
-      <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-20">
+      {/* Spotlight Header Section */}
+      <section className="bg-gradient-to-r from-wtmblue/80 to-wtmteal/80 py-20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Event Spotlight</h1>
-            <p className="text-xl text-gray-600">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Event Spotlight</h1>
+            <p className="text-xl text-white mb-6">
               Relive the memorable moments from our previous events.
             </p>
           </motion.div>
         </div>
       </section>
 
+      {/* Photo Gallery */}
       <section className="py-20">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -56,7 +58,7 @@ const Spotlight = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-lg shadow-lg"
+                className="group relative overflow-hidden rounded-lg shadow-xl transition-transform transform hover:scale-105"
               >
                 <img
                   src={photo.url}
@@ -65,9 +67,7 @@ const Spotlight = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-white text-lg font-semibold">
-                      {photo.caption}
-                    </p>
+                    <p className="text-white text-lg font-semibold">{photo.caption}</p>
                   </div>
                 </div>
               </motion.div>
@@ -76,9 +76,10 @@ const Spotlight = () => {
         </div>
       </section>
 
+      {/* Event Highlights Video */}
       <section className="py-20 bg-gray-50">
         <div className="container">
-          <h2 className="section-title">Event Highlights</h2>
+          <h2 className="section-title text-wtmblue">Event Highlights</h2>
           <div className="max-w-3xl mx-auto">
             <div className="aspect-w-16 aspect-h-9">
               <iframe
