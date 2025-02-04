@@ -190,3 +190,8 @@
 .swiper-button-prev:after {
   font-size: 24px !important;
 }
+@media(max-width: 768px){
+.swiper{
+  height: 80vh;
+}
+}

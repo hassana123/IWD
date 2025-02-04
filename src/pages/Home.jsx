@@ -175,7 +175,7 @@ const Home = () => {
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-wtmblue/60 to-transparent">
-                  <div className="container h-full flex items-center">
+                  <div className="container h-full md:flex items-center">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -185,13 +185,13 @@ const Home = () => {
                       <div className="mb-4 inline-block p-2 bg-wtmteal rounded-full">
                         {slide.icon}
                       </div>
-                      <h2 className="text-xl font-bold uppercase tracking-wider mb-2 text-white">
+                      <h2 className="text-md md:text-xl font-bold uppercase tracking-wider mb-2 text-white">
                         {slide.subtitle}
                       </h2>
-                      <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+                      <h1 className="text-2xl md:text-3xl font-bold mb-4 text-white">
                         {slide.title}
                       </h1>
-                      <p className="text-xl mb-8 text-center text-white">
+                      <p className="md:text-xl mb-8 text-center text-white">
                         {slide.description}
                       </p>
                       {index === 0 && (
@@ -435,8 +435,7 @@ const Home = () => {
     </div>
   </div>
 </section>
-
-    </div>
+</div>
   );
 };
 
