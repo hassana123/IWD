@@ -305,7 +305,7 @@ const Home = () => {
 
       {/* Sponsors Preview */}
       <section className="py-16 bg-gradient-to-r from-wtmblue/5 my-5 to-wtmteal/5">
-        <div className="container w-[90%] mx-auto max-w-[800px]">
+        <div className="container w-[98%] mx-auto max-w-[800px]">
           <h2 className="section-title text-wtmteal">Our Sponsors</h2>
           <div className="grid grid-cols-2 gap-3">
             {sponsors.map((sponsor) => (
@@ -319,7 +319,7 @@ const Home = () => {
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className="mx-auto h-[30vh] mb-4"
+                  className="mx-auto md:h-[30vh] h-[15vh] mb-4"
                 />
                 <h3 className="text-lg font-bold text-wtmblue">
                   {sponsor.name}
