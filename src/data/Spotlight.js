@@ -7,8 +7,28 @@ import img6 from "../assets/6.jpeg";
 import img7 from "../assets/7.jpeg";
 import img8 from "../assets/8.jpeg";
 import img9 from "../assets/9.jpeg";
+import img10 from "../assets/10.jpeg";
+import img11 from "../assets/11.jpeg";
+import img12 from "../assets/12.jpeg";
+import img13 from "../assets/13.jpeg";
 
 export const photos = [
+    {
+        url: img10,
+        caption: 'IWD Dare to Be',
+    },
+    {
+        url: img11,
+        caption: 'IWD Dare to Be',
+    },
+    {
+        url: img12,
+        caption: 'IWD Dare to Be',
+    },
+    {
+        url: img13,
+        caption: 'IWD Dare to Be',
+    },
     {
         url: img4,
         caption: 'IWD Dare to Be',
