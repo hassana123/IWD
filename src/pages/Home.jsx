@@ -188,7 +188,7 @@ const Home = () => {
                       <h2 className="text-md md:text-xl font-bold uppercase tracking-wider mb-2 text-white">
                         {slide.subtitle}
                       </h2>
-                      <h1 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                      <h1 className="text-xl md:text-3xl font-bold mb-4 text-white">
                         {slide.title}
                       </h1>
                       <p className="md:text-xl mb-8 text-center text-white">
