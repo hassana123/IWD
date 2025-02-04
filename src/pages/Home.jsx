@@ -155,7 +155,7 @@ const Home = () => {
           spaceBetween={0}
           centeredSlides={true}
           autoplay={{
-            delay: 180000,
+            delay: 120000,
             disableOnInteraction: false,
           }}
           pagination={{
