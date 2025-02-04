@@ -395,7 +395,7 @@ const Home = () => {
       </section>
 
       {/* Quick Links */}
-      <section className="py-10">
+      <section className="py-10 bg-wtmteal px-3 ">
   <div className="container">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       <Link
