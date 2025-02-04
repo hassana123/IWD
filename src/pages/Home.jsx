@@ -174,13 +174,13 @@ const Home = () => {
                   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.bgImage})`,
                 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-wtmblue/60 to-transparent">
+                <div className="absolute inset-0 bg-gradient-to-r from-wtmblue/60 to-transparent md:py-0 py-20">
                   <div className="container h-full md:flex items-center">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6 }}
-                      className="max-w-3xl text-white"
+                      className="max-w-md text-white"
                     >
                       <div className="mb-4 inline-block p-2 bg-wtmteal rounded-full">
                         {slide.icon}
@@ -195,7 +195,7 @@ const Home = () => {
                         {slide.description}
                       </p>
                       {index === 0 && (
-                        <div className="space-y-3 mt-[-15px]">
+                        <div className=" mt-[-25px] mb-3">
                           <div className="md:flex text-center items-center md:space-x-4 text-lg mx-auto w-[50%] space-y-2 md:space-y-0">
                             <div className="flex text-center items-center space-x-2 text-lg">
                               <Calendar className="w-6 h-6" />
@@ -209,15 +209,15 @@ const Home = () => {
                         </div>
                       )}
                     </motion.div>
-                    <div className="inline-block text-white bg-white/10 backdrop-blur-md rounded-lg p-6 mx-auto">
+                    <div className="inline-block text-white bg-white/10 backdrop-blur-md rounded-lg md:p-6 p-3 mx-auto">
                       <Countdown
                         date={eventDate}
                         renderer={({ days, hours, minutes, seconds }) => (
                           <div className="flex gap-8">
                             {/* Days */}
                             <div className="flex flex-col items-center">
-                              <div className="text-4xl font-bold mb-2">
-                                <Calendar className="w-8 h-8 mb-2 text-white text-center" />
+                              <div className="md:text-4xl text-xl font-bold mb-2">
+                                <Calendar className="md:w-8 md:h-8 mb-2 text-white text-center" />
                                 {days}
                               </div>
                               <div className="text-sm">Days</div>
@@ -225,8 +225,8 @@ const Home = () => {
 
                             {/* Hours */}
                             <div className="flex flex-col items-center">
-                              <div className="text-4xl font-bold mb-2">
-                                <Clock className="w-8 h-8 mb-2 text-white text-center" />
+                              <div className="md:text-4xl text-xl font-bold mb-2">
+                                <Clock className="mdd:w-8 md:h-8 mb-2 text-white text-center" />
                                 {hours}
                               </div>
                               <div className="text-sm">Hours</div>
@@ -234,8 +234,8 @@ const Home = () => {
 
                             {/* Minutes */}
                             <div className="flex flex-col items-center">
-                              <div className="text-4xl font-bold mb-2">
-                                <Clock className="w-8 h-8 mb-2 text-white text-center" />
+                              <div className="md:text-4xl text-xl font-bold mb-2">
+                                <Clock className="md:w-8 md:h-8 mb-2 text-white text-center" />
                                 {minutes}
                               </div>
                               <div className="text-sm">Minutes</div>
@@ -243,8 +243,8 @@ const Home = () => {
 
                             {/* Seconds */}
                             <div className="flex flex-col items-center">
-                              <div className="text-4xl font-bold mb-2 text-center">
-                                <Watch className="w-8 h-8 mb-2 text-white" />
+                              <div className="md:text-4xl text-xl font-bold mb-2 text-center">
+                                <Watch className="md:w-8 md:h-8 mb-2 text-white" />
                                 {seconds}
                               </div>
                               <div className="text-sm">Seconds</div>

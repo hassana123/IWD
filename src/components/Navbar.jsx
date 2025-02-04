@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-3">
           <NavLink to="/" className="flex gap-2 items-center">
           <img className='w-6' src={logo} alt="wtm-logo" />
-            <span className="text-md font-bold text-primary">International Women's Day Kano</span>
+            <span className="md:text-md font-bold text-primary">International Women's Day Kano</span>
           </NavLink>
 
           {/* Desktop Navigation */}
