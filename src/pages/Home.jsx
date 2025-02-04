@@ -18,7 +18,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import { photos } from "../data/Spotlight";
 const Home = () => {
   const eventDate = new Date("2025-03-08T09:00:00");
   const navigate = useNavigate();
@@ -129,16 +129,16 @@ const Home = () => {
     },
   ];
 
-  const spotlightPhotos = [
-    {
-      url: "https://images.unsplash.com/photo-1591115765373-5207764f72e7",
-      caption: "Keynote Session 2023",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b",
-      caption: "Workshop Session",
-    },
-  ];
+  // const spotlightPhotos = [
+  //   {
+  //     url: "https://images.unsplash.com/photo-1591115765373-5207764f72e7",
+  //     caption: "Keynote Session 2023",
+  //   },
+  //   {
+  //     url: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b",
+  //     caption: "Workshop Session",
+  //   },
+  // ];
 
   const stats = [
     { number: "500+", label: "Attendees" },
@@ -341,7 +341,7 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title text-wtmteal">Event Spotlight</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {spotlightPhotos.map((photo, index) => (
+            {photos.slice(0,2).map((photo, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

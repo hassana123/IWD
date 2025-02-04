@@ -1,33 +1,33 @@
 import { motion } from 'framer-motion';
-
+import { photos } from '../data/Spotlight';
 const Spotlight = () => {
-  const photos = [
-    {
-      url: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7',
-      caption: 'Keynote Session 2023',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b',
-      caption: 'Workshop Session',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1',
-      caption: 'Networking Event',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b',
-      caption: 'Panel Discussion',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87',
-      caption: 'Award Ceremony',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1511578314322-379afb476865',
-      caption: 'Tech Exhibition',
-    },
-    // Add more photos as needed
-  ];
+  // const photos = [
+  //   {
+  //     url: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7',
+  //     caption: 'Keynote Session 2023',
+  //   },
+  //   {
+  //     url: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b',
+  //     caption: 'Workshop Session',
+  //   },
+  //   {
+  //     url: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1',
+  //     caption: 'Networking Event',
+  //   },
+  //   {
+  //     url: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b',
+  //     caption: 'Panel Discussion',
+  //   },
+  //   {
+  //     url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87',
+  //     caption: 'Award Ceremony',
+  //   },
+  //   {
+  //     url: 'https://images.unsplash.com/photo-1511578314322-379afb476865',
+  //     caption: 'Tech Exhibition',
+  //   },
+  //   // Add more photos as needed
+  // ];
 
   return (
     <div>
