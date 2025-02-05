@@ -180,7 +180,7 @@ const Home = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6 }}
-                      className="max-w-md text-white"
+                      className="md:w-[60%] text-white"
                     >
                       <div className="mb-4 inline-block p-2 bg-wtmteal rounded-full">
                         {slide.icon}
@@ -226,7 +226,7 @@ const Home = () => {
                             {/* Hours */}
                             <div className="flex flex-col items-center">
                               <div className="md:text-4xl text-xl font-bold mb-2">
-                                <Clock className="mdd:w-8 md:h-8 mb-2 text-white text-center" />
+                                <Clock className="md:w-8 md:h-8 mb-2 text-white text-center" />
                                 {hours}
                               </div>
                               <div className="text-sm">Hours</div>
