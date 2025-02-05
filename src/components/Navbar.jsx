@@ -20,10 +20,13 @@ const Navbar = () => {
     <nav className="bg-white shadow-md fixed w-[100%] z-5">
       <div className="container mx-auto md:px-0 px-4 lg:px-4">
         <div className="flex justify-between items-center py-3">
-          <NavLink to="/" className="flex gap-2 items-center">
-          <img className='w-6' src={logo} alt="wtm-logo" />
-            <span className="md:text-md font-bold text-primary">International Women's Day Kano</span>
-          </NavLink>
+        <NavLink to="/" className="flex gap-2 items-center">
+  <img className='w-6' src={logo} alt="wtm-logo" />
+  <span className="md:text-md text-[12px] md:font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+    International Women's Day Kano
+  </span>
+</NavLink>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex lg:space-x-8 space-x-4">
@@ -47,7 +50,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <HiX className="h-6 w-6 text-dark" />
+              <HiX className="h-6 w-6 text-primary" />
             ) : (
               <HiMenu className="h-6 w-6 text-dark" />
             )}
