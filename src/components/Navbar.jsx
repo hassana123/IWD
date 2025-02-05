@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-3">
         <NavLink to="/" className="flex gap-2 items-center">
   <img className='w-6' src={logo} alt="wtm-logo" />
-  <span className="md:text-[18px]  text-[13px] md:font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+  <span className="md:text-[18px]  text-[15px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
     International Women's Day Kano
   </span>
 </NavLink>
