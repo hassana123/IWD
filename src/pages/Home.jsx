@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import Countdown from "react-countdown";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Calendar,
@@ -22,6 +23,7 @@ import { photos } from "../data/Spotlight";
 const Home = () => {
   const eventDate = new Date("2025-03-08T09:00:00");
   const navigate = useNavigate();
+  const [activeSlide, setActiveSlide] = useState(0);
   const slides = [
     {
       title: "Celebrating Women in Tech - Internatonal Women's Day Kano 2025",
@@ -146,7 +148,9 @@ const Home = () => {
     { number: "10+", label: "Interactive Sessions" },
     { number: "1", label: "Transformative Day" },
   ];
-
+  const handleSlideChange = (swiper) => {
+    setActiveSlide(swiper.activeIndex); // Set the active slide index
+  };
   return (
     <div>
       {/* Hero Section */}
@@ -163,7 +167,8 @@ const Home = () => {
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="h-full"
+          className={activeSlide === 0 ? 'md:h-[75vh] h-[77vh]' : 'h-[65vh] md:h-[55vh]'} // Apply height class only when on the first slide
+          onSlideChange={handleSlideChange} // Track slide change
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
