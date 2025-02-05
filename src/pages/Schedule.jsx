@@ -50,7 +50,7 @@ const Schedule = () => {
 
   return (
     <div>
-      <section className="bg-gradient-to-r from-wtmblue/80 to-wtmteal/80 py-20">
+      <section className="bg-gradient-to-r from-wtmblue/80 to-wtmteal/80 py-5 mt-10">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

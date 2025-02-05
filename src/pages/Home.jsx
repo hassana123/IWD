@@ -38,7 +38,7 @@ const Home = () => {
       subtitle: "Our Mission",
       description: "Learn about our mission to empower women in technology",
       bgImage:
-        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80",
+        "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DSC_6188.width-1200.format-webp.webp",
       link: "/about",
       icon: <Heart className="w-8 h-8 text-white" />,
     },
