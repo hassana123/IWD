@@ -18,18 +18,18 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md fixed w-[100%] z-5">
-      <div className="container mx-auto md:px-0 px-4 lg:px-4">
+      <div className="w-[95%] mx-auto  ">
         <div className="flex justify-between items-center py-3">
         <NavLink to="/" className="flex gap-2 items-center">
   <img className='w-6' src={logo} alt="wtm-logo" />
-  <span className="md:text-md text-[12px] md:font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+  <span className="md:text-[18px]  text-[13px] md:font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
     International Women's Day Kano
   </span>
 </NavLink>
 
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex lg:space-x-8 space-x-4">
+          <div className="w-[65%] hidden lg:flex  space-x-4">
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
@@ -46,7 +46,7 @@ const Navbar = () => {
 
           {/* Mobile Navigation Button */}
           <button
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
@@ -59,7 +59,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
                 <NavLink
