@@ -65,7 +65,7 @@ const GetInvolved = () => {
       {/* Volunteer and Speaker Application Sections */}
       <section className="md:py-10 py-5">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className={`${activeSection==="volunteer"|| activeSection=== "speaker"?"w-[96%] max-w-[700px] mx-auto":"grid grid-cols-1 md:grid-cols-2 gap-10"}`}>
             {/* Only show this when the volunteer section is active */}
             {activeSection === 'volunteer' && (
               <motion.div
