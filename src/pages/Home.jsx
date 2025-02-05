@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Countdown from "react-countdown";
 import { useState } from "react";
+import rp from "../assets/rp.png"
 import { motion } from "framer-motion";
 import {
   Calendar,
@@ -40,7 +41,7 @@ const Home = () => {
       subtitle: "Our Mission",
       description: "Learn about our mission to empower women in technology",
       bgImage:
-        "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DSC_6188.width-1200.format-webp.webp",
+        "https://media.licdn.com/dms/image/v2/C4D12AQHQdEcnAB6JWQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1554136874913?e=2147483647&v=beta&t=JG9ZxIgu1E9Clye_VoRO7CnRDMFyb3S88CD34C2V_Ws",
       link: "/about",
       icon: <Heart className="w-8 h-8 text-white" />,
     },
@@ -48,8 +49,7 @@ const Home = () => {
       title: "Event Schedule",
       subtitle: "What's Happening",
       description: "Explore our exciting lineup of sessions and workshops",
-      bgImage:
-        "https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&q=80",
+      bgImage:rp,
       link: "/schedule",
       icon: <Calendar className="w-8 h-8 text-white" />,
     },
