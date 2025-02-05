@@ -1,11 +1,23 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { CheckCircle, ArrowLeft } from 'lucide-react';
+import { submitVolunteerApplication } from '../components/Volunteer';
 const GetInvolved = () => {
   // State to control whether the volunteer form or speaker form is open
   const [isVolunteerFormOpen, setIsVolunteerFormOpen] = useState(false);
   const [isSpeakerFormOpen, setIsSpeakerFormOpen] = useState(false);
-
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    areaOfInterest: '',
+    reason: '',
+  });
+  const [errors, setErrors] = useState({});
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate= useNavigate();
   // Function to toggle Volunteer Form
   const toggleVolunteerForm = () => {
     setIsVolunteerFormOpen((prev) => !prev);
@@ -14,6 +26,24 @@ const GetInvolved = () => {
   // Function to toggle Speaker Form
   const toggleSpeakerForm = () => {
     setIsSpeakerFormOpen((prev) => !prev);
+  };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+   const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setSubmissionStatus(null);
+    const result = await submitVolunteerApplication(formData);
+    setIsLoading(false);
+    if (!result.success) {
+      setErrors(result.errors || {});
+      setSubmissionStatus({ success: false, message: result.error || 'Submission failed' });
+    } else {
+      setSubmissionStatus({ success: true, message: 'Application submitted successfully!' });
+      setFormData({ fullName: '', email: '', phone: '', areaOfInterest: '', reason: '' });
+    }
   };
 
   return (
@@ -66,52 +96,61 @@ const GetInvolved = () => {
                 </>
               ) : (
                 <div>
-                  <button
-                    className="text-wtmteal text-xl mb-4"
-                    onClick={toggleVolunteerForm}
-                  >
-                    &#8592; Back
+              <button className="text-wtmteal text-xl mb-4 flex items-center" onClick={toggleVolunteerForm}>
+                <ArrowLeft className="h-5 w-5 mr-2" /> Back
+              </button>
+              <h2 className="text-3xl font-bold text-wtmblue">Volunteer Form</h2>
+              {submissionStatus && submissionStatus.success ? (
+                <div className="text-center">
+                  <CheckCircle className="h-16 w-16 text-green-500 mx-auto" />
+                  <p className="text-green-600 mt-4 text-xl">{submissionStatus.message}</p>
+                  <button className="btn btn-primary mt-6" onClick={() => navigate('/')}>
+                    Go Back to Home
                   </button>
-                  <h2 className="text-3xl font-bold mb-6 text-wtmblue">Volunteer Form</h2>
-                  <form className="space-y-6">
-                    <div>
-                      <label className="block text-gray-700 mb-2">Full Name</label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-2 border rounded-lg focus:ring-primary focus:border-primary"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-700 mb-2">Email</label>
-                      <input
-                        type="email"
-                        className="w-full px-4 py-2 border rounded-lg focus:ring-primary focus:border-primary"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-700 mb-2">Phone Number</label>
-                      <input
-                        type="tel"
-                        className="w-full px-4 py-2 border rounded-lg focus:ring-primary focus:border-primary"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-700 mb-2">Areas of Interest</label>
-                      <select className="w-full px-4 py-2 border rounded-lg focus:ring-primary focus:border-primary">
-                        <option>Event Management</option>
-                        <option>Technical Support</option>
-                        <option>Registration</option>
-                        <option>Social Media</option>
-                      </select>
-                    </div>
-                    <button type="submit" className="btn btn-primary hover:bg-wtmteal/80 transition">
-                      Submit Application
-                    </button>
-                  </form>
                 </div>
+              ) : (
+                <form className="space-y-6 mt-6" onSubmit={handleSubmit}>
+                  <div>
+                    <label className="block text-gray-700">Full Name</label>
+                    <input name="fullName" type="text" className="w-full p-2 border rounded-lg" value={formData.fullName} onChange={handleChange} required />
+                    {errors.fullName && <p className="text-red-600">{errors.fullName}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-gray-700">Email</label>
+                    <input name="email" type="email" className="w-full p-2 border rounded-lg" value={formData.email} onChange={handleChange} required />
+                    {errors.email && <p className="text-red-600">{errors.email}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-gray-700">Phone Number</label>
+                    <input name="phone" type="tel" className="w-full p-2 border rounded-lg" value={formData.phone} onChange={handleChange} required />
+                    {errors.phone && <p className="text-red-600">{errors.phone}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-gray-700">Areas of Interest</label>
+                    <select name="areaOfInterest" className="w-full p-2 border rounded-lg" value={formData.areaOfInterest} onChange={handleChange} required>
+                      <option value="">Select an option</option>
+                      <option>Event Management</option>
+                      <option>Technical Support</option>
+                      <option>Social Media</option>
+                      <option>Workshop Facilitation</option>
+                      <option>Community Outreach</option>
+                      <option>Fundraising</option>
+                      <option>Logistics & Operations</option>
+                    </select>
+                    {errors.areaOfInterest && <p className="text-red-600">{errors.areaOfInterest}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-gray-700">Why do you want to volunteer?</label>
+                    <textarea name="reason" className="w-full p-2 border rounded-lg" rows="4" value={formData.reason} onChange={handleChange} required></textarea>
+                    {errors.reason && <p className="text-red-600">{errors.reason}</p>}
+                  </div>
+                  <button type="submit" className="btn btn-primary" disabled={isLoading}>
+                    {isLoading ? 'Submitting...' : 'Submit Application'}
+                  </button>
+                </form>
+              )}
+            </div>
+
               )}
             </motion.div>
 
