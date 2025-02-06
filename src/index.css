@@ -22,8 +22,15 @@
   --color-tahiti: #3ab7bf;
   --color-bermuda: #78dcca;
 
+  /* Added brand colors */
+  --color-logo-white: #FFFFFF;
+  --color-logo-black: #202124;
+  --color-logo-blue: #2480F0;
+  --color-logo-green: #00947B;
+
   --font-display: Montserrat, serif;
 }
+
 /* Manually defining fonts */
 /* body {
   font-family:"Karla", serif
