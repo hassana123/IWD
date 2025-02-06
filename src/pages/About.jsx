@@ -116,7 +116,64 @@ const About = () => {
           </Swiper>
         </div>
       </section>
-
+   {/* Our Story and Event Highlights Section */}
+   <section className="md:py-10 py-5">
+        <div className="w-[90%] mx-auto max-w-[900px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold text-wtmblue mb-6">
+                Our Story
+              </h2>
+              <p className="text-gray-600 mb-4">
+                International Women's Day Kano celebration began in 2020 as a
+                small gathering of women in tech. Today, it has grown into one
+                of Northern Nigeria's largest tech events celebrating women's
+                achievements in technology.
+              </p>
+              <h2 className="text-3xl font-bold text-wtmblue mb-6">
+                Our Mission
+              </h2>
+              <p className="text-gray-600">
+                Our mission is to inspire the next generation of women leaders
+                in technology while providing a platform for networking,
+                learning, and growth.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-primary/5 p-8 rounded-lg"
+            >
+              <h2 className="text-3xl font-bold text-wtmblue mb-6">
+                Event Highlights
+              </h2>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <span className="text-wtmteal text-2xl mr-4">•</span>
+                  <span>Inspiring keynotes from industry leaders</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-wtmteal text-2xl mr-4">•</span>
+                  <span>Interactive workshops and panel discussions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-wtmteal text-2xl mr-4">•</span>
+                  <span>Networking opportunities with tech professionals</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-wtmteal text-2xl mr-4">•</span>
+                  <span>Career development sessions</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       {/* Swiper Custom Styling */}
       <style jsx>{`
         .swiper-button-prev,
