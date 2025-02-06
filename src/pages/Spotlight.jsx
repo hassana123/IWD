@@ -10,7 +10,7 @@ const Spotlight = () => {
   return (
     <div>
       {/* Spotlight Header Section */}
-      <section className="bg-gradient-to-r from-wtmblue/80 to-wtmteal/80 py-10">
+      <section className="bg-gradient-to-r from-wtmblue/80 to-wtmteal/80 py-5 mt-10">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -18,8 +18,8 @@ const Spotlight = () => {
             transition={{ duration: 1 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              🎉 Event Spotlight 🎊
+            <h1 className="text-4xl mt-3  md:text-5xl font-bold text-white mb-6">
+              Event Spotlight 
             </h1>
             <p className="text-xl text-white mb-6">
               Relive the unforgettable moments from our past events!
