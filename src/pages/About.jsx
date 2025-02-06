@@ -11,7 +11,7 @@ const About = () => {
   return (
     <div>
       {/* About Section with WTM Gradient */}
-      <section className="bg-gradient-to-r from-wtmblue/80 to-wtmteal/80 py-10">
+      <section className="bg-gradient-to-r from-wtmblue/80 to-wtmteal/80 py-5 mt-10">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -138,18 +138,15 @@ const About = () => {
         }
 
         .swiper-pagination-bullet {
-          background-color: #4081ec !important;
-          width: 12px;
-          height: 12px;
-          opacity: 0.6;
+          display :none;
         }
 
-        .swiper-pagination-bullet-active {
-          background-color: #00b89f !important;
-          width: 14px;
-          height: 14px;
-          opacity: 1;
-        }
+        // .swiper-pagination-bullet-active {
+        //   background-color: #00b89f !important;
+        //   width: 14px;
+        //   height: 14px;
+        //   opacity: 1;
+        // }
       `}</style>
     </div>
   );
